@@ -1,0 +1,118 @@
+body,html{
+  padding: 0;
+  margin: 0;
+  background: #100D42;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.artboard{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: spin 3s forwards infinite ease-out;
+  }
+
+.circle-1{
+  animation: switch-top 3s infinite ease-out;
+}
+.circle-3{
+  animation: switch-bottom 3s infinite ease-out;
+}
+.circle-4{
+  animation: switch-left 3s infinite ease-out;
+}
+.circle-2{
+  animation: switch-right 3s infinite ease-out;
+}
+
+
+
+
+@keyframes spin{
+  0%{
+    transform: rotate(0turn);
+  } 
+  30%{
+    transform: rotate(1turn)
+  }
+  50%{
+    transform: rotate(1turn)
+  }
+  80%{
+    transform: rotate(2turn)
+  }
+  100%{
+    transform: rotate(2turn)
+  }
+}
+
+@keyframes switch-top{
+  0%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(0px);
+  }
+  40%{
+    transform: translateY(150px);
+  }
+  80%{
+    transform: translateY(150px);
+  }
+ 90%{
+    transform: translateX(0px);
+  }
+}
+@keyframes switch-bottom{
+  0%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(0px);
+  }
+  40%{
+    transform: translateY(-150px);
+  }
+  80%{
+    transform: translateY(-150px);
+  }
+  90%{
+    transform: translateX(0px);
+  }
+}
+@keyframes switch-left{
+  0%{
+    transform: translateX(0px);
+  }
+  35%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(150px);
+  }
+  85%{
+    transform: translateX(150px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes switch-right{
+  0%{
+    transform: translateX(0px);
+  }
+  35%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(-150px);
+  }
+  85%{
+    transform: translateX(-150px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
