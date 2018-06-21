@@ -1,40 +1,27 @@
 <!DOCTYPE html>
+<html>
 <head>
-<title>Table Tag</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+    <title>Table Tag - cost splitter</title>
 </head>
-
 <body>
-<div id="wrapper">
-    <header>
-        <h1>Table Tag</h1>
-    </header>
-        Amount: $<input id="bill" type="text">
-
-        Tip: <span id="tip"></span>
-        <button onclick="calc()">10% Tip</button>
-        <button onclick="calc2()">15% Tip</button>
-        <button onclick="calc3()">30% Tip</button>
-        <br>
-        Total: <span id="total"></span>      
-
+ <div>
+ Amount: $<input id="sum" type="text">
+ Number of Guest: <input id="group" type="text">
+ <button onclick="splitTheBill()">Split The Cost</button>
+ Total per Guest:$<span id="total" type="text"></span>   
 </div>
+
 <script>
-    function calc(){
-        var bill = parseInt(document.getElementById('bill').value);
-        var tip = bill / 10;
-         document.getElementById("total").innerHTML = bill + tip;
-    }
-    function calc2() {
-        var bill = parseInt(document.getElementById('bill').value);
-        var tip = bill * .15;
-   document.getElementById("total").innerHTML = bill + tip;
-    }
-    function calc3() {
-        var bill = parseInt(document.getElementById('bill').value);
-        var tip = bill * .30;
-    document.getElementById("total").innerHTML = bill + tip;
-    }     
-    
+   
+    function splitTheBill() {
+var sum = parseInt(document.getElementById('sum').value);
+var group = sum /parseInt(document.getElementById('group').value);
+
+document.getElementById("total").innerHTML = group;
+}
+
 </script>
+
+
 </body>
+</html>
