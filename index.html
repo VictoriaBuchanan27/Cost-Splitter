@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<title>TABLE TAG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #FF0000;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('tabletag.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("tabletag.png");
+    min-height: 400px;
+}
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+.center{
+  /*margin: 0 auto;*/
+  width: auto;
+  margin-left: 20%;
+}
+.tips{
+  width: auto;
+  margin-left: 30%;
+}
+.tips2{
+    width: auto;
+  margin-left: 30%;
+}
+.pop{
+  width: auto;
+  margin-left: 30%;
+}
+.container2{
+  width: auto;
+  margin-left: 30%;
+}
+</style>
+<body>
+
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-#00ffffff w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small"></span></span>
+  </div>
+</div>
+
+<div id="wrapepr" class="pop">
+  <div class="actions">
+    <a href="javascript:;" class="actionBtn AddFriend">Add a friend</a>
+    <a href="javascript:;" class="actionBtn AddLists">Add a bill</a>
+  </div>
+  <div class="listform EnterFriendDetails">
+    <form name="addFR" if="addFR" onsubmit="return validateFr();" action="javascript:;">
+      <label for="friendName">Enter Friend Name</label>
+      <input type="text" required placeholder="Enter Friend Name"  name="name" id="friendName">
+      <input type="submit" value="Add" id="frSubmit">
+      <input type="submit" value="Save" id="frSave">
+    </form>
+  </div>
+  <div class="listform EnterListDetails">
+    <form name="addaBill" id="addBill" onsubmit="return validateList();" action="javascript:;">
+      <div class="formRow">
+        <label for="ListName">List Details</label>
+        <input type="text" required placeholder="Enter List details" id="listName">
+      </div>
+      <div class="formRow">
+        
+        <input type="number" min="1" required placeholder="Enter Amount"id="listAmount">
+      </div>
+     
+      <input type="submit" value="Add" id="lsSubmit">
+      <input type="submit" value="Save" id="lsChange">
+    </form>
+  </div>
+  <div class="conatiner2">
+    <div class="myLists">
+      <h1>Bill</h1>
+      <ul>
+        
+      </ul>
+    </div>
+    <div class="myFriend">
+      <h1>Friends</h1>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- Container (About Section) -->
+<div class="center">
+      <header>
+      <div class="tips2"
+      <h1>SPLIT THE BILL</h1>
+    </div>
+    </header>
+ Amount: $<input id="sum" type="text">
+ Number of Guest: <input id="group" type="text">
+ <button onclick="splitTheBill()">Split The Cost</button>
+ Total per Guest:$<span id="total" type="text"></span>   
+</div>
+<script>
+   
+    function splitTheBill() {
+var sum = parseInt(document.getElementById('sum').value);
+var group = sum /parseInt(document.getElementById('group').value);
+
+document.getElementById("total").innerHTML = group;
+}
+
+</script>
+
+<div id="wrapper" class="center">
+    <header>
+      <div class="tips"
+      <h1>ADD THE TIP</h1>
+    </div>
+    </header>
+        Amount: $<input id="bill" type="text">
+
+        Tip: <span id="tip"></span>
+        <button onclick="calc()">10% Tip</button>
+        <button onclick="calc2()">15% Tip</button>
+        <button onclick="calc3()">30% Tip</button>
+        <button onclick="calc4()">No Tip</button>
+        <br>
+        Total: <span id="total2"></span>      
+
+</div>
+<script>
+    function calc(){
+        var bill = parseInt(document.getElementById('bill').value);
+        var tip = bill / 10;
+         document.getElementById("total2").innerHTML = bill + tip;
+    }
+    function calc2() {
+        var bill = parseInt(document.getElementById('bill').value);
+        var tip = bill * .15;
+   document.getElementById("total2").innerHTML = bill + tip;
+    }
+    function calc3() {
+        var bill = parseInt(document.getElementById('bill').value);
+        var tip = bill * .30;
+    document.getElementById("total2").innerHTML = bill + tip;
+    }     
+    function calc4() {
+        var bill = parseInt(document.getElementById('bill').value);
+        var tip = bill * 0;
+    document.getElementById("total2").innerHTML = bill + tip;
+    }
+</script>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide"></span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+
+
+</body>
+</html>
