@@ -51,6 +51,14 @@ body, html {
     width: auto;
   margin-left: 30%;
 }
+.pop{
+  width: auto;
+  margin-left: 30%;
+}
+.container2{
+  width: auto;
+  margin-left: 30%;
+}
 </style>
 <body>
 
@@ -61,6 +69,56 @@ body, html {
     <span class="w3-center w3-padding-large w3-#00ffffff w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small"></span></span>
   </div>
 </div>
+
+<div id="wrapepr" class="pop">
+  <div class="actions">
+    <a href="javascript:;" class="actionBtn AddFriend">Add a friend</a>
+    <a href="javascript:;" class="actionBtn AddLists">Add a bill</a>
+  </div>
+  <div class="listform EnterFriendDetails">
+    <form name="addFR" if="addFR" onsubmit="return validateFr();" action="javascript:;">
+      <label for="friendName">Enter Friend Name</label>
+      <input type="text" required placeholder="Enter Friend Name"  name="name" id="friendName">
+      <input type="submit" value="Add" id="frSubmit">
+      <input type="submit" value="Save" id="frSave">
+    </form>
+  </div>
+  <div class="listform EnterListDetails">
+    <form name="addaBill" id="addBill" onsubmit="return validateList();" action="javascript:;">
+      <div class="formRow">
+        <label for="ListName">List Details</label>
+        <input type="text" required placeholder="Enter List details" id="listName">
+      </div>
+      <div class="formRow">
+        
+        <input type="number" min="1" required placeholder="Enter Amount"id="listAmount">
+      </div>
+     
+      <input type="submit" value="Add" id="lsSubmit">
+      <input type="submit" value="Save" id="lsChange">
+    </form>
+  </div>
+  <div class="conatiner2">
+    <div class="myLists">
+      <h1>Bill</h1>
+      <ul>
+        
+      </ul>
+    </div>
+    <div class="myFriend">
+      <h1>Friends</h1>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
 
 <!-- Container (About Section) -->
 <div class="center">
